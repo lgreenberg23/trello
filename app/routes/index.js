@@ -16,4 +16,8 @@ export default Route.extend({
       description: 'things i mean to work on'
     }];
   }
+
+    // model() {
+    // return this.get('store').findAll('list')
+  	// }
 });
