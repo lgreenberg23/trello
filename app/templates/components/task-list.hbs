@@ -5,44 +5,8 @@
       {{!-- {{#each list.tasks as |task|}} --}}
       {{#each-in list.tasks as |task description| }}
         <li>{{task}}</li>
-      {{/each-in}}
-
-      
+      {{/each-in}}  
 
     </ul>
 
 </article>
-
-
-    
-    {{!-- {{task-list list=taskList}} --}}
-
-
-    {{!-- {{#each-in lists as |list tasks|}}
-      <h3>{{list}}</h3>
-        <ul>
-        {{#each tasks as |task|}}
-          <li>{{task}}</li>
-        {{/each}}
-        {{input value=taskName}}
-        <button {{action "addTask"}}>Add Task</button>
-      </ul>
-    {{else}}
-      <h3> Default List </h3>
-    {{/each-in}}
-
-    {{input value=listName}}
-    <button {{action "addList"}}>Add List</button>
-
- --}}
-
-  {{!-- </div>   --}}
-  
-
-
-{{!--   <h3>{{list.title}}</h3>
-    <span>Description:</span> {{list.description}}
-    <br>
-    <a class="newTask">
-    <button>Add Task</button>
-  	</a> --}}
