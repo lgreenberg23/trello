@@ -1,19 +1,12 @@
 <div class="container">
 	<h2>Lists</h2>
+  
   <div class="Lists">
     
-  </div>
-  <div class="body">
-
-  	{{#each model as |list|}}
-	  <article class="listing">
-	    <h3>{{list.title}}</h3>
-	    <div class="details">
-	      <span>Description:</span> {{list.description}}
-	    </div>
-	    
-	  </article>
+  {{#each model as |taskList|}}
+  	{{task-list list=taskList}}	 
 	{{/each}}
+
   </div>
 
 </div>
