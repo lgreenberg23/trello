@@ -7,17 +7,19 @@ export default Route.extend({
         type: 'lists',
         id: '1',
         name: 'To Do',
-        tasks: ['get buttons to work', 'wash dishes']        
+        tasks: {'get buttons to work':'today', 'wash dishes':'also must happen today'}       
       }, {
         type: 'lists',
         id: '2',
         name: 'Projects',
-        tasks: ['emberrrr', 'snake name change']         
+        tasks: {'emberrrr': 'wahhhhh', 
+          'snake name change': 'probably wont get to this' 
+        }        
       }, {
         type: 'lists',
         id: '3',
         name: 'Groceries',
-        tasks: ['apples', 'kale']         
+        tasks: {}//['apples', 'kale']         
       }]
   }
 });

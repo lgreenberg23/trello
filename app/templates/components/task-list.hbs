@@ -2,9 +2,13 @@
   
 	<h3>{{list.name}}</h3>
     <ul>
-      {{#each list.tasks as |task|}}
+      {{!-- {{#each list.tasks as |task|}} --}}
+      {{#each-in list.tasks as |task description| }}
         <li>{{task}}</li>
-      {{/each}}
+      {{/each-in}}
+
+      
+
     </ul>
 
 </article>
