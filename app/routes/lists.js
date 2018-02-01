@@ -7,7 +7,8 @@ export default Route.extend({
         type: 'list',
         id: '1',
         name: 'To Do',
-        tasks: {'get buttons to work':'today', 'wash dishes':'also must happen today'}       
+        tasks: {'get buttons to work':'today', 
+          'wash dishes':'also must happen today'}       
       }, {
         type: 'list',
         id: '2',
