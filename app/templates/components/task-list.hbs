@@ -1,27 +1,33 @@
 <article class="list">
   
-  <div class="details">
-
-
-
-		<ul>
-		  {{#each-in lists as |list tasks|}}
-		    <li>{{list}}
-		      <ol>
-		        {{#each tasks as |task|}}
-		          <li>{{task}}</li>
-		        {{/each}}
-		        <button>Add Task</button>
-		      </ol>
-		    </li>
-		  {{else}}
-  			<h2>Default List</h2>	
-		  {{/each-in}}
-		</ul>
-
-  </div>  
-  
+	<h3>{{list.name}}</h3>
 </article>
+
+
+    
+    {{!-- {{task-list list=taskList}} --}}
+
+
+    {{!-- {{#each-in lists as |list tasks|}}
+      <h3>{{list}}</h3>
+        <ul>
+        {{#each tasks as |task|}}
+          <li>{{task}}</li>
+        {{/each}}
+        {{input value=taskName}}
+        <button {{action "addTask"}}>Add Task</button>
+      </ul>
+    {{else}}
+      <h3> Default List </h3>
+    {{/each-in}}
+
+    {{input value=listName}}
+    <button {{action "addList"}}>Add List</button>
+
+ --}}
+
+  {{!-- </div>   --}}
+  
 
 
 {{!--   <h3>{{list.title}}</h3>
