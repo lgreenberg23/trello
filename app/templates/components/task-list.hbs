@@ -1,6 +1,12 @@
 <article class="list">
   
 	<h3>{{list.name}}</h3>
+    <ul>
+      {{#each list.tasks as |task|}}
+        <li>{{task}}</li>
+      {{/each}}
+    </ul>
+
 </article>
 
 

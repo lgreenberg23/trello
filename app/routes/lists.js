@@ -6,15 +6,18 @@ export default Route.extend({
     return [{
         type: 'lists',
         id: '1',
-        name: 'To Do'        
+        name: 'To Do',
+        tasks: ['get buttons to work', 'wash dishes']        
       }, {
         type: 'lists',
         id: '2',
-        name: 'Projects'        
+        name: 'Projects',
+        tasks: ['emberrrr', 'snake name change']         
       }, {
         type: 'lists',
         id: '3',
-        name: 'Groceries'        
+        name: 'Groceries',
+        tasks: ['apples', 'kale']         
       }]
   }
 });
