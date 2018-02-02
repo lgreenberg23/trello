@@ -5,8 +5,25 @@
         {{title}}
       </div>
       <div class="modal-body">
+
+		 <form {{action 'ok' on='submit' target=view}}>
+		    <div class="form-group">
+
+	  		{{!-- <div class="description"> --}}
+    		<span>Description:</span> {{task.description}}
+		      {{!-- <fieldset> --}}
+		  			{{input class="form-control" name="task description" value=task.description}}
+					{{!-- </fieldset> --}}
+  			</div>
+  		</form>
+
         {{yield}}
       </div>
     </div>
   </div>
 {{/if}}
+
+
+ {{!--      <label>Name</label>
+      {{input class="form-control" value=name}}
+    </div> --}}

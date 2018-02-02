@@ -8,6 +8,7 @@ export default Ember.Component.extend({
     // {{debugger}}
     app_controller.set(exposedName, this);
 	}.on('init'),
+	
 	actions: {
     toggleModal: function() {
         this.toggleProperty('enabled');

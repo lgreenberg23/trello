@@ -1,11 +1,11 @@
 <article class="task">
-  <p>{{task.taskName}}</p>
+  <a {{action 'openModal' task.id}}>{{task.taskName}}</a>
 
 </article>
 {{!--   <a {{action 'edit'}} class="name">
   </a> --}}
 
-  {{#edit-task-modal enabled=false title=task.taskName id=task.id}}
+  {{#edit-task-modal enabled=false description=task.description title=task.taskName id=task.id}}
 		Yo modal. (Click anywhere to dismiss this notification.)
 	{{/edit-task-modal}}
-<button {{action 'openModal' task.id}}>Open Modal Window</button>
+{{!-- <button {{action 'openModal' task.id}}>Open Modal Window</button> --}}
