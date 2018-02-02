@@ -1,5 +1,10 @@
 <article class="task">
   <p>{{task.taskName}}</p>
+
 </article>
 {{!--   <a {{action 'edit'}} class="name">
   </a> --}}
+
+  {{#edit-task-modal enabled=true title=task.taskName}}
+		This is our modal (Click anywhere to dismiss this notification.)
+	{{/edit-task-modal}}

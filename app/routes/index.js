@@ -5,5 +5,5 @@ export default Route.extend({
   redirect: function() {
         this.transitionTo('lists');
     }
-	
+
 });

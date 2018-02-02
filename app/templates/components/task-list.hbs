@@ -6,9 +6,6 @@
         <li>{{task-display task=taskName}}</li>
           {{!-- <li>{{task.taskName}}</li> --}}
 
-{{!--           <button {{action 'showModal' 'task-editor' target=modals}}>
-              edit task
-          </button> --}}
       {{/each}}
 
     </ul>
@@ -16,4 +13,5 @@
       {{input value=taskName}}
         <button {{action "addTask"}}>Add Task</button>
     </div>
+
 </article>

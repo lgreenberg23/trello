@@ -6,15 +6,17 @@ export default Route.extend({
     return [
       {
         type: 'list',
+        id: 1,
         name: 'Default List',
         tasks: []     
       },
     {
         type: 'list',
+        id: 2,
         name: 'To Do',
         tasks: [
-          {taskName:'get buttons to work', description:'today'}, 
-          {taskName:'wash dishes', description:'also must happen today'}]     
+          {id:1, taskName:'get buttons to work', description:'today'}, 
+          {id: 2, taskName:'wash dishes', description:'also must happen today'}]     
       }//, {
     //     type: 'list',
     //     name: 'Projects',
