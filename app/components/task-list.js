@@ -1,36 +1,30 @@
 import Component from '@ember/component';
+import Object from '@ember/object'
+
+	var Task = Ember.Object.extend({
+	  taskName: null,
+			description: null, 
+	  init: function() {
+	    this._super()
+	    this.set("taskName", '') 
+	    this.set("description", '')
+	  }
+	})
 
 export default Component.extend({
 
-	// var List = Ember.Object.extend({
-	//   type: 'to do',
-	//   name: null,
-	//   tasks: null
-	//   init: function() {
-	//     this._super()
-	//     this.set("name", '') 
-	//     this.set("tasks", {})
-	//   }
-	// })
 
 	actions: {
-		// addList: function() {
-		// 	let listName = this.get('listName')
-		// 	'lists'[listName] = ''
-		// },
 		addTask: function() {
 			let taskName = this.get('taskName')
 			if ( !taskName || !taskName.trim() ) {
 					return false
 				}
 			//console.log()
-			this.get('tasks').pushObject(taskName)
+			var newTask = Task.create().setProperties({taskName: taskName, description:'' })			
+			this.get('list.tasks').pushObject(newTask)
 		}
 	}
 
-
-
-			// var newList = List.create().setProperties({name: listName, tasks:[] })			
-			// this.get('model').pushObject(newList)
 
 });
