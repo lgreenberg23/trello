@@ -13,9 +13,19 @@ export default Ember.Component.extend({
     toggleModal: function() {
         this.toggleProperty('enabled')
     },
-    closeToggleModal: function() {
-    	console.log("i am in close modal")
-    	this.toggleProperty('disabled')
+   //  addDescription: function() {
+   //  	let taskDescription = this.get('description')
+   //  	let taskId = this.get('task.id')
+			// //console.log()
+			
+			// Task.find(taskId).setProperties({ description:taskDescription })			
+			// //this.get('list.tasks').pushObject(newTask)
+
+    // },
+    deleteTask: function() {
+    	var taskId = this.get(target) 
+    	console.log("i am in delete task", taskId)
     }
+
 	}
 });

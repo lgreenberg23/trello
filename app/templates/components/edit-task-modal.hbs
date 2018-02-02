@@ -7,18 +7,18 @@
       <div class="modal-body">
   			<button {{action 'toggleModal' task.id}}> x </button>
 
-		 <form {{action 'ok' on='submit' target=view}}>
 		    <div class="form-group">
 
 	  		{{!-- <div class="description"> --}}
-    		<span>Description:</span> 
+    		<span>Description:</span>
     		{{!-- {{task.description}} --}}
-		      <fieldset>
-		  			{{input class="form-control" name="task description" value=task.description}}
-					</fieldset>
+		      	
+		  			{{!-- {{input value=task.description id=task.id}} --}}
+		      	
+		  			{{!-- option to delete task --}}
+		  			<button {{action 'deleteTask'}}>Delete</button>
 
   			</div>
-  		</form>
         {{yield}}
       </div>
     	
