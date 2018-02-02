@@ -11,9 +11,10 @@ export default Ember.Component.extend({
 	
 	actions: {
     toggleModal: function() {
-        this.toggleProperty('enabled');
+        this.toggleProperty('enabled')
     },
-    closeModal: function() {
+    closeToggleModal: function() {
+    	console.log("i am in close modal")
     	this.toggleProperty('disabled')
     }
 	}

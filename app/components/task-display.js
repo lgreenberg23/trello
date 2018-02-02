@@ -17,11 +17,12 @@ export default Component.extend({
 		// },
    openModal: function(target) {
       var modal = this.get('comp-' + target);
-      modal.send('toggleModal');
+      modal.send('toggleModal')
     },
-    closeModal:function(target) {
+    closeModal: function(target) {
+    	console.log("i am in close modal")
       var modal = this.get('comp-' + target);
-      modal.send('toggleModal');
+      modal.send('closeToggleModal')
     }
 		
 	}

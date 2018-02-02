@@ -1,11 +1,11 @@
 {{#if enabled}}
   <div class="modal-fog">
     <div class="modal-frame">
-    	<button {{action 'closeModal'}}> close </button>
       <div class="modal-title">
         {{title}}
       </div>
       <div class="modal-body">
+  			<button {{action 'toggleModal' task.id}}> x </button>
 
 		 <form {{action 'ok' on='submit' target=view}}>
 		    <div class="form-group">
@@ -19,9 +19,9 @@
 
   			</div>
   		</form>
-
         {{yield}}
       </div>
+    	
     </div>
   </div>
 {{/if}}
