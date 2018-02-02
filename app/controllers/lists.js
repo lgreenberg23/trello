@@ -20,9 +20,7 @@ export default Controller.extend({
 				if ( !listName || !listName.trim() ) {
 					return false
 				}
-			var newList = List.create().setProperties({name: listName, tasks:[] })
-			// {{debugger}}
-			
+			var newList = List.create().setProperties({name: listName, tasks:[] })			
 			this.get('model').pushObject(newList)
 		}
 	}

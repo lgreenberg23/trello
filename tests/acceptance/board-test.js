@@ -6,7 +6,10 @@ moduleForAcceptance('Acceptance | board')
 test('should show lists as the home page', function (assert) {
 })
 
-test('should link to add a list', function (assert) {
+test('should never be less than one list', function (assert) {
+})
+
+test('should be able to add a list', function (assert) {
 })
 
 test('should not be able to add an empty string as a list', function (assert) {
@@ -35,6 +38,9 @@ test('should be able to delete a task', function (assert) {
 
 
 /*
+number of lists never less than one
+
+
 Should pop out an editing modal onClick
 Should be able to close the modal
 Should be able to delete a list from the Modal

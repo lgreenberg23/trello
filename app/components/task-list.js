@@ -20,8 +20,17 @@ export default Component.extend({
 		// },
 		addTask: function() {
 			let taskName = this.get('taskName')
+			if ( !taskName || !taskName.trim() ) {
+					return false
+				}
 			//console.log()
 			this.get('tasks').pushObject(taskName)
 		}
 	}
+
+
+
+			// var newList = List.create().setProperties({name: listName, tasks:[] })			
+			// this.get('model').pushObject(newList)
+
 });

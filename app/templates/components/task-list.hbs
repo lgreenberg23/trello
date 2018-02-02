@@ -2,10 +2,9 @@
   
 	<h3>{{list.name}}</h3>
     <ul>
-      {{!-- {{#each list.tasks as |task|}} --}}
-      {{#each-in list.tasks as |task description| }}
-        <li>{{task}}</li>
-      {{/each-in}}  
+      {{#each list.tasks as |task|}}
+          <li>{{task.taskName}}</li>
+      {{/each}}
 
     </ul>
     {{input value=taskName}}
