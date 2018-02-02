@@ -5,6 +5,7 @@
 {{!--   <a {{action 'edit'}} class="name">
   </a> --}}
 
-  {{#edit-task-modal enabled=true title=task.taskName}}
-		This is our modal (Click anywhere to dismiss this notification.)
+  {{#edit-task-modal enabled=false title=task.taskName id=task.id}}
+		Yo modal. (Click anywhere to dismiss this notification.)
 	{{/edit-task-modal}}
+<button {{action 'openModal' task.id}}>Open Modal Window</button>

@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-	isShowingModal: false,
+	// isShowingModal: false,
 	actions: {
 		// editTaskName: function() {
 		// 	let taskName = this.get('taskName')
@@ -15,8 +15,9 @@ export default Component.extend({
 		// editTaskDescription: function(){
 		// 	let description = this.get('description')
 		// },
-    toggleModal: function() {
-      this.toggleProperty('isShowingModal');
+   openModal: function(target) {
+      var modal = this.get('comp-' + target);
+      modal.send('toggleModal');
     }
 		
 	}
