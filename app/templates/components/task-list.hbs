@@ -2,11 +2,18 @@
   
 	<h3>{{list.name}}</h3>
     <ul>
-      {{#each list.tasks as |task|}}
-          <li>{{task.taskName}}</li>
+      {{#each list.tasks as |taskName|}}
+        <li>{{task-display task=taskName}}</li>
+          {{!-- <li>{{task.taskName}}</li> --}}
+
+{{!--           <button {{action 'showModal' 'task-editor' target=modals}}>
+              edit task
+          </button> --}}
       {{/each}}
 
     </ul>
-    {{input value=taskName}}
-      <button {{action "addTask"}}>Add Task</button>
+    <div class='input'>
+      {{input value=taskName}}
+        <button {{action "addTask"}}>Add Task</button>
+    </div>
 </article>

@@ -4,11 +4,12 @@
   {{/each}}
 </ul>
 
+  {{!-- {{input name="task name" value=task.name change=(action "required")}} --}}
+  {{task.name}}
 <fieldset>
-  {{input name="task name" value=task.name change=(action "required")}}
   {{input name="task description" value=task.description change=(action "required")}}
 </fieldset>
 
   <div class="description">
-    <span>Number of description:</span> {{task.description}}
+    <span>Description:</span> {{task.description}}
   </div>
