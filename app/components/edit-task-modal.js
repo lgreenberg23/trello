@@ -12,6 +12,9 @@ export default Ember.Component.extend({
 	actions: {
     toggleModal: function() {
         this.toggleProperty('enabled');
+    },
+    closeModal: function() {
+    	this.toggleProperty('disabled')
     }
 	}
 });

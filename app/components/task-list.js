@@ -16,6 +16,7 @@ import Object from '@ember/object'
 
 export default Component.extend({
 
+	taskToDelete: null,
 
 	actions: {
 		addTask: function() {
@@ -27,11 +28,6 @@ export default Component.extend({
 			
 			var newTask = Task.create().setProperties({id: ++counter, taskName: taskName, description:'' })			
 			this.get('list.tasks').pushObject(newTask)
-		},
-		removeTask: function(){
-			// let thisTask = event.target
-			// var filteredArray = tasks.filter((task) => thisTask.id !== list.task.id)
-			// return filteredArray
 		}
 	}
 

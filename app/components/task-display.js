@@ -18,6 +18,10 @@ export default Component.extend({
    openModal: function(target) {
       var modal = this.get('comp-' + target);
       modal.send('toggleModal');
+    },
+    closeModal:function(target) {
+      var modal = this.get('comp-' + target);
+      modal.send('toggleModal');
     }
 		
 	}

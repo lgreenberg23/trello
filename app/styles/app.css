@@ -1,5 +1,3 @@
-/*@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";*/
 
 .modal-fog {
   background: rgba(30, 30, 30, 0.5);
@@ -31,3 +29,13 @@
   padding: 5px;
   overflow: scroll;
 }
+
+/*
+.song-delete-action {
+  display: none;
+}
+
+.song:hover .song-delete-action {
+  display: inline-block;
+  cursor: pointer;
+}*/

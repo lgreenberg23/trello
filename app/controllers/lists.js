@@ -15,15 +15,12 @@ var List = Object.extend({
 })
 
 export default Controller.extend({
-//add an ID?
-
 	actions: {
 		addList: function() {
 			let listName = this.get('listName')
 				if ( !listName || !listName.trim() ) {
 					return false
 				}
-			
 			var newList = List.create().setProperties({id: ++counter, name: listName, tasks:[] })			
 			this.get('model').pushObject(newList)
 		}

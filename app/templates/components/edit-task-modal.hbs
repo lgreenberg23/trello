@@ -1,6 +1,7 @@
 {{#if enabled}}
-  <div {{action 'toggleModal'}} class="modal-fog">
+  <div class="modal-fog">
     <div class="modal-frame">
+    	<button {{action 'closeModal'}}> close </button>
       <div class="modal-title">
         {{title}}
       </div>
@@ -10,10 +11,12 @@
 		    <div class="form-group">
 
 	  		{{!-- <div class="description"> --}}
-    		<span>Description:</span> {{task.description}}
-		      {{!-- <fieldset> --}}
+    		<span>Description:</span> 
+    		{{!-- {{task.description}} --}}
+		      <fieldset>
 		  			{{input class="form-control" name="task description" value=task.description}}
-					{{!-- </fieldset> --}}
+					</fieldset>
+
   			</div>
   		</form>
 
@@ -24,6 +27,4 @@
 {{/if}}
 
 
- {{!--      <label>Name</label>
-      {{input class="form-control" value=name}}
-    </div> --}}
+
