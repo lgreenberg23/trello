@@ -13,9 +13,8 @@ export default Ember.Component.extend({
     toggleModal: function() {
         this.toggleProperty('enabled')
     },
-    closeToggleModal: function() {
-    	console.log("i am in close modal")
-    	this.toggleProperty('disabled')
+    titleChange: function() {
+    	console.log("i am in edit title")
     }//,
     // addDescription: function() { 
     //   let description = this.get('description')

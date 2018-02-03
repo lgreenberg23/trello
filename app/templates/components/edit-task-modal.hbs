@@ -2,14 +2,15 @@
   <div class="modal-fog">
     <div class="modal-frame">
       <div class="modal-title">
-        {{title}}
+        <input type="text" value={{title}} onblur={{action "titleChange"}} />
+
+        {{!-- {{title}} --}}
       </div>
       <div class="modal-body">
   			<button {{action 'toggleModal' task.id}}> x </button>
 
 		    <div class="task-description">
 
-	  		{{!-- <div class="description"> --}}
     		  <span>Description:</span> 
 		  		{{input value=description}}
           {{!-- <button {{action 'addDescription'}}>add description</button> --}}
