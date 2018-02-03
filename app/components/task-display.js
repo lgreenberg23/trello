@@ -17,7 +17,6 @@ export default Component.extend({
 		// },
    openModal: function(target) {
       var modal = this.get('comp-' + target);
-      // {{debugger}}
       modal.send('toggleModal')
     }
 		

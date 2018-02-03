@@ -7,18 +7,13 @@
       <div class="modal-body">
   			<button {{action 'toggleModal' task.id}}> x </button>
 
-		 {{!-- <form {{action 'ok' on='submit' target=view}}> --}}
 		    <div class="task-description">
 
 	  		{{!-- <div class="description"> --}}
     		<span>Description:</span> 
-    		{{!-- {{task.description}} --}}
-		      {{!-- <fieldset> --}}
-		  			{{input class="form-control" name="task description" value=task.description}}
-					{{!-- </fieldset> --}}
+		  			{{input value=description}}
 
   			</div>
-  		{{!-- </form> --}}
         {{yield}}
       </div>
     	
