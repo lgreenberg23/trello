@@ -10,10 +10,12 @@
 		    <div class="task-description">
 
 	  		{{!-- <div class="description"> --}}
-    		<span>Description:</span> 
-		  			{{input value=description}}
+    		  <span>Description:</span> 
+		  		{{input value=description}}
+          {{!-- <button {{action 'addDescription'}}>add description</button> --}}
 
   			</div>
+
         {{yield}}
       </div>
     	
