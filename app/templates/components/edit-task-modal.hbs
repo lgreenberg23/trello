@@ -2,7 +2,7 @@
   <div class="modal-fog">
     <div class="modal-frame">
       <div class="modal-title">
-        <input type="text" value={{title}} onblur={{action "titleChange"}} />
+        <input type="text" value={{title}} onkeypress={{action "titleChange"}} />
 
         {{!-- {{title}} --}}
       </div>
@@ -12,8 +12,8 @@
 		    <div class="task-description">
 
     		  <span>Description:</span> 
-		  		{{input value=description}}
-          {{!-- <button {{action 'addDescription'}}>add description</button> --}}
+		  		{{!-- {{input value=description}} --}}
+           <input type="text" value={{description}} onkeypress={{action "addDescription"}}/>
 
   			</div>
 

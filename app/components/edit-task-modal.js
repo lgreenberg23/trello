@@ -15,11 +15,12 @@ export default Ember.Component.extend({
     },
     titleChange: function() {
     	console.log("i am in edit title")
-    }//,
-    // addDescription: function() { 
-    //   let description = this.get('description')
-    //   let task = this.get('task')
-    //   task.setProperties({description: description })
-    // }
+    },
+    addDescription: function() { 
+      let description = this.get('description')
+      console.log("this is the description now", description)
+      // let task = this.get('task')
+      // task.setProperties({description: description })
+    }
   }
 });

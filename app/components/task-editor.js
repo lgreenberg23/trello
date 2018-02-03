@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-	  init() {
+  init() {
     this._super(...arguments);
     this.errors = [];
   },
