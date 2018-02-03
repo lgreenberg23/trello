@@ -15,8 +15,8 @@ export default Route.extend({
         id: 2,
         name: 'To Do',
         tasks: [
-          {id:1, taskName:'get buttons to work', description:'today'}, 
-          {id: 2, taskName:'wash dishes', description:'also must happen today'}]     
+          {id:2, taskName:'get buttons to work', description:'today'}, 
+          {id: 3, taskName:'wash dishes', description:'also must happen today'}]     
       }//, {
     //     type: 'list',
     //     name: 'Projects',
