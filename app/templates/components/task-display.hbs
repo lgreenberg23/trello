@@ -1,8 +1,16 @@
 <article class="task">
-  <a {{action 'openModal' task.id}}>{{task.taskName}}</a>
+  {{task.taskName}} 
+
+  <button {{action "toggleModal"}}>Toggle Modal</button>
+
+{{#if isShowingModal}}
+  {{#edit-task-modal onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    Oh hai there!
+  {{/edit-task-modal}}
+{{/if}}
 
 </article>
 
-  {{#edit-task-modal enabled=false description=task.description title=task.taskName id=task.id}}
-		
-	{{/edit-task-modal}}
+
