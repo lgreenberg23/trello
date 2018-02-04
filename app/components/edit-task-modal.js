@@ -3,24 +3,36 @@ import Component from '@ember/component';
 
 export default Ember.Component.extend({
   expose: function() {
-    var app_controller = this.get('targetObject');
     var exposedName = "comp-" + this.get('id');
-    // {{debugger}}
-    app_controller.set(exposedName, this);
+    (exposedName, this);
 	}.on('init'),
 	
 	actions: {
     toggleModal: function() {
-        this.toggleProperty('enabled')
+      //figure out how to show all properties 
+      this.toggleProperty('enabled')
     },
     titleChange: function() {
-    	console.log("i am in edit title")
+      let title = this.get('title')
+      let newTitle = this.get('target')
+      {{debugger}}
+    	console.log("i am in edit title", title, newTitle)
+      //let oldtitle = this.get('title')
+      return newTitle
+
     },
     addDescription: function() { 
-      let description = this.get('description')
+      let description = this.get('value')
       console.log("this is the description now", description)
       // let task = this.get('task')
       // task.setProperties({description: description })
+    },
+    deleteTask: function() {
+      let taskID = this.get('id')
+      let taskArray = this.get('list.tasks')
+      console.log("i clicked delete", taskID, taskArray)
+      // return taskArray.filter(task => task.id !== taskID)
+
     }
   }
 });

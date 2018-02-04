@@ -4,7 +4,7 @@
     
     <ul>
       {{#each list.tasks as |taskName|}}
-        <li>{{task-display task=taskName}}</li>
+        <li>{{task-display task=taskName myList=list}}</li>
       {{/each}}
     </ul>
 
