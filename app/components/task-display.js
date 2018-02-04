@@ -5,6 +5,9 @@ export default Component.extend({
   actions: {
     toggleModal: function() {
       this.toggleProperty('isShowingModal');
+    },
+    deleteTask: function(){
+    	console.log("i am in delete task")
     }
   }
 })
