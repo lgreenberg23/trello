@@ -1,4 +1,5 @@
 <article class="task">
+<<<<<<< HEAD
   <a {{action 'openModal' task.id}}>{{task.taskName}}</a>
   <br>
   <p>{{task.description}}</p>
@@ -8,3 +9,20 @@
   {{#edit-task-modal enabled=false description=task.description title=task.taskName id=task.id list=myList}}
 		
 	{{/edit-task-modal}}
+=======
+ <a {{action "toggleModal"}}> {{task.taskName}} </a>
+
+{{#if isShowingModal}}
+	{{#modal-dialog onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+  		{{edit-task-modal description=task.description title=task.taskName id=task.id list=myList}}
+  		<button {{action 'toggleModal' id}}> close </button>
+		<button {{action 'deleteTask' id }}> delete </button>
+  {{/modal-dialog}}
+{{/if}}
+
+</article>
+
+
+>>>>>>> working-version
