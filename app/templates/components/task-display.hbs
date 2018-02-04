@@ -6,9 +6,9 @@
 	{{#modal-dialog onClose="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-  		{{edit-task-modal description=task.description title=task.taskName id=task.id list=myList}}
+  		{{edit-task-modal description=task.description title=task.taskName id=task.id }}
   		<button {{action 'toggleModal' id}}> close </button>
-		<button {{action 'deleteTask' id }}> delete </button>
+		<button {{action 'deleteTask' id task myList}}> delete </button>
   {{/modal-dialog}}
 {{/if}}
 

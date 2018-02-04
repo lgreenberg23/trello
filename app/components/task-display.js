@@ -8,7 +8,9 @@ export default Component.extend({
     },
     deleteTask: function(){
     	console.log("i am in delete task")
->>>>>>> working-version
+    	var task = this.get('task')
+    	var list = this.get('myList')
+    	console.log("task: ",task, " list: ", list.tasks)
     }
   }
 })
