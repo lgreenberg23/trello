@@ -1,35 +1,6 @@
-<<<<<<< HEAD
-{{#if enabled}}
-  <div class="modal-fog">
-    <div class="modal-frame">
-      <div class="modal-title">
-        <input type="text" value={{title}} oninput={{action "titleChange" value="target.value"}} />
-{{!-- does input force a page re-render --}}
-        {{!-- {{input value=title}} --}}
-      </div>
-      <div class="modal-body">
-        <button {{action 'toggleModal' id}}> close </button>
-  			<button {{action 'deleteTask' id }}> delete </button>
-
-		    <div class="task-description">
-
-    		  <span>Description:</span> 
-		  		{{textarea value=description}}
-
-           {{!-- <input type="textarea" value={{description}} oninput={{mut value}} onkeypress={{action "addDescription"}}/> --}}
-
-  			</div>
-
-        {{yield}}
-      </div>
-    	
-    </div>
-  </div>
-{{/if}}
-=======
 
   <div class="modal-body">
-  <div title>
+  <div class='title'>
         {{input value=title}}
   </div>
     
@@ -39,7 +10,6 @@
   		Description:
   		<br> 
 	  		{{textarea value=description}}
->>>>>>> working-version
 
 		</div>
 

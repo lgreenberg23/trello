@@ -1,15 +1,5 @@
 <article class="task">
-<<<<<<< HEAD
-  <a {{action 'openModal' task.id}}>{{task.taskName}}</a>
-  <br>
-  <p>{{task.description}}</p>
 
-</article>
-
-  {{#edit-task-modal enabled=false description=task.description title=task.taskName id=task.id list=myList}}
-		
-	{{/edit-task-modal}}
-=======
  <a {{action "toggleModal"}}> {{task.taskName}} </a>
 
 {{#if isShowingModal}}
@@ -25,4 +15,3 @@
 </article>
 
 
->>>>>>> working-version
