@@ -1,9 +1,9 @@
 <div class="list">
   
     {{#if editList}}
-      {{input value=list.name enter="editList"}}
+      {{input value=list.name enter="editListName"}}
     {{else}}
-	   <a {{action "editListName"}}><h3>{{list.name}}</h3></a>
+	   <a {{action "showEditListName"}}><h3>{{list.name}}</h3></a>
     {{/if}}
     
       {{#each list.tasks as |taskName|}}
@@ -16,7 +16,7 @@
           {{input value=taskName enter="addTask"}}
         {{else}}
         <a href {{action "openNewTask"}}>Add a task...</a>
-        
+
         {{/if}}
     </div>
 

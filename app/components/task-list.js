@@ -35,9 +35,17 @@ export default Component.extend({
 			this.set('taskName', '')
 			this.set('addATask', false)
 		},
+		showEditListName: function() {
+			this.set('editList', true)
+		},
 		editListName: function() {
 			let listName = this.get('list.name')
-			this.set('editList', true)
+			if (listName === ''){
+				alert("please give your list a name")
+			}	
+			else{		
+				this.set('editList', false)
+			}
 		}
 	}
 
