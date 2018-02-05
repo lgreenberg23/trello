@@ -16,7 +16,8 @@ import Object from '@ember/object'
 
 export default Component.extend({
 
-	addATask : false,
+	addATask: false,
+	editList: false,
 
 	actions: {
 		openNewTask: function(){
@@ -32,6 +33,11 @@ export default Component.extend({
 			var newTask = Task.create().setProperties({id: ++counter, taskName: taskName, description:'' })			
 			this.get('list.tasks').pushObject(newTask)
 			this.set('taskName', '')
+			this.set('addATask', false)
+		},
+		editListName: function() {
+			let listName = this.get('list.name')
+			this.set('editList', true)
 		}
 	}
 

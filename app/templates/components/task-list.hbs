@@ -1,15 +1,22 @@
 <div class="list">
   
-	<h3>{{list.name}}</h3>
+    {{#if editList}}
+      {{input value=list.name enter="editList"}}
+    {{else}}
+	   <a {{action "editListName"}}><h3>{{list.name}}</h3></a>
+    {{/if}}
     
       {{#each list.tasks as |taskName|}}
         <p>{{task-display task=taskName myList=list}}</p>
       {{/each}}
+    
 
     <div class='input'>
-        <a href {{action "openNewTask"}}>Add Task</a>
         {{#if addATask}}
           {{input value=taskName enter="addTask"}}
+        {{else}}
+        <a href {{action "openNewTask"}}>Add a task...</a>
+        
         {{/if}}
     </div>
 
