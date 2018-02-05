@@ -28,6 +28,7 @@ export default Controller.extend({
 				}
 			var newList = List.create().setProperties({id: ++counter, name: listName, tasks:[] })			
 			this.get('model').pushObject(newList)
+			this.set('listName', '')
 		}
 	}
 })

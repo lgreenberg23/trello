@@ -31,6 +31,7 @@ export default Component.extend({
 			
 			var newTask = Task.create().setProperties({id: ++counter, taskName: taskName, description:'' })			
 			this.get('list.tasks').pushObject(newTask)
+			this.set('taskName', '')
 		}
 	}
 
