@@ -9,10 +9,10 @@
 			onClose=(action "toggleModal" false) 
       targetAttachment='center'
       translucentOverlay=true}}
-
-			<button {{action 'toggleModal' id}}> close </button>
-			{{!-- <button {{action 'deleteTask' id task myList}}> delete </button> --}}
-			<button {{action 'toggleDelete' id task myList}}> delete </button>
+      <div class='modal-buttons'>
+				<button {{action 'toggleModal' id}}> close </button>
+				<button {{action 'toggleDelete' id task myList}}> delete </button>
+			</div>
 
 			{{#if isShowingDeleteModal}}
 				{{#modal-dialog renderInPlace=true}}
