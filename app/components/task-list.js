@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import Object from '@ember/object'
 
-	let counter = 3
+	let counter = 6
 	var Task = Ember.Object.extend({
 	  taskName: null,
 		description: null,

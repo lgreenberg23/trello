@@ -1,5 +1,8 @@
 import DS from 'ember-data'
 
 export default DS.Model.extend({
-	// name: DS.attr()
+	type: DS.attr(),
+	name: DS.attr(),
+	tasks: DS.attr(),
+	
 })
