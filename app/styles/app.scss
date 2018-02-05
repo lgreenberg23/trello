@@ -20,9 +20,21 @@
 }
 
 .addlist {
-	//border: 1px;
 	margin: 20px;
 	padding: 20px;
+}
+.addlist input{
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.add-task-input input{
+	font-size: 11pt;
+	padding: 10px;
+	margin: 11px;
+	border: 1px;
+	border-style: solid;
+	max-width: 155px;
 }
 
 .show-task {
@@ -46,6 +58,9 @@
 .modal-body {
   min-width: 400px;
   min-height: 250px;
+}
+.modal-task-title input{
+	font-size: 16pt;
 }
 .task-description {
 	min-width: 100px;
