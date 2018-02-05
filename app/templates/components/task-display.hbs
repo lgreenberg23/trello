@@ -5,9 +5,10 @@
 	</div>
 
 	{{#if isShowingModal}}
-		{{#modal-dialog onClose='toggleModal'
-                  targetAttachment='center'
-                  translucentOverlay=true}}
+		{{#modal-dialog 
+			onClose=(action "toggleModal" false) 
+      targetAttachment='center'
+      translucentOverlay=true}}
 
 			<button {{action 'toggleModal' id}}> close </button>
 			{{!-- <button {{action 'deleteTask' id task myList}}> delete </button> --}}
