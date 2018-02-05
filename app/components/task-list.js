@@ -16,9 +16,12 @@ import Object from '@ember/object'
 
 export default Component.extend({
 
-	taskToDelete: null,
+	addATask : false,
 
 	actions: {
+		openNewTask: function(){
+			this.set('addATask', true)
+		},
 		addTask: function() {
 			let taskName = this.get('taskName')
 			if ( !taskName || !taskName.trim() ) {

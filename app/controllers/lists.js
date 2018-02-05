@@ -15,7 +15,12 @@ var List = Object.extend({
 })
 
 export default Controller.extend({
+	addAList : false,
+
 	actions: {
+		openNewList: function(){
+			this.set('addAList', true)
+		},
 		addList: function() {
 			let listName = this.get('listName')
 				if ( !listName || !listName.trim() ) {

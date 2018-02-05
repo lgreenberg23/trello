@@ -1,6 +1,7 @@
 import Component from '@ember/component';
-// import layout from '../templates/components/edit-task-modal';
+import ModalDialog from 'ember-modal-dialog/components/modal-dialog'
 
-export default Ember.Component.extend({
-	
+export default ModalDialog.extend({
+
 });
+

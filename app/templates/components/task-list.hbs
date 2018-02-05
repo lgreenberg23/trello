@@ -7,8 +7,10 @@
       {{/each}}
 
     <div class='input'>
-      {{input value=taskName}}
-        <button {{action "addTask"}}>Add Task</button>
+        <a href {{action "openNewTask"}}>Add Task</a>
+        {{#if addATask}}
+          {{input value=taskName enter="addTask"}}
+        {{/if}}
     </div>
 
 </div>

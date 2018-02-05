@@ -1,16 +1,19 @@
 <div class="task">
 
- <a {{action "toggleModal"}}> {{task.taskName}} </a>
+	<div class="show-task" {{action "toggleModal"}}>
+		<p> {{task.taskName}} </p>
+	</div>
 
-{{#if isShowingModal}}
-	{{#modal-dialog onClose="toggleModal"
-                  targetAttachment="center"
+	{{#if isShowingModal}}
+		{{#modal-dialog onClose='toggleModal'
+                  targetAttachment='center'
                   translucentOverlay=true}}
-  		{{edit-task-modal description=task.description title=task.taskName id=task.id }}
-  		<button {{action 'toggleModal' id}}> close </button>
-		<button {{action 'deleteTask' id task myList}}> delete </button>
-  {{/modal-dialog}}
-{{/if}}
+
+			{{edit-task-modal description=task.description title=task.taskName id=task.id }}
+			<button {{action 'toggleModal' id}}> close </button>
+			<button {{action 'deleteTask' id task myList}}> delete </button>
+  	{{/modal-dialog}}
+	{{/if}}
 
 </div>
 
