@@ -8,9 +8,10 @@
 	 {{/each}}
 
     <div class="addlist">
-      <a href {{action "openNewList"}}> Add a list...</a>
       {{#if addAList}}
         {{input value=listName enter="addList"}}
+      {{else}}
+        <a href {{action "openNewList"}}> Add a list...</a>
       {{/if}}
 
     </div>
