@@ -5,16 +5,12 @@
   	{{#each model as |listName|}}
   		{{task-list list=listName}}
 
-{{!--   	{{else}}
-  		<h3>Default List</h3>
-  		{{input value=taskName}}
-  		<button {{action "addTask"}}>Add Task</button> --}}
+	 {{/each}}
 
-	{{/each}}
-
-
+  <div class="addlist">
+    {{input value=listName}}
+    <button {{action "addList"}}>Add List</button>
   </div>
-  {{input value=listName}}
-  <button {{action "addList"}}>Add List</button>
+  </div>
 
 </div>

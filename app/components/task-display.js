@@ -7,11 +7,9 @@ export default Component.extend({
       this.toggleProperty('isShowingModal');
     },
     deleteTask: function(){
-    	console.log("i am in delete task")
     	var task = this.get('task')
     	var taskID = this.get('id')
     	var list = this.get('myList')
-    	console.log("task: ",task, " list: ", list.tasks)
     	list.tasks.removeObject(task)
     }
   }

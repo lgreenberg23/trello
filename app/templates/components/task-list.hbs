@@ -1,16 +1,14 @@
-<article class="list">
+<div class="list">
   
 	<h3>{{list.name}}</h3>
     
-    <ul>
       {{#each list.tasks as |taskName|}}
-        <li>{{task-display task=taskName myList=list}}</li>
+        <p>{{task-display task=taskName myList=list}}</p>
       {{/each}}
-    </ul>
 
     <div class='input'>
       {{input value=taskName}}
         <button {{action "addTask"}}>Add Task</button>
     </div>
 
-</article>
+</div>

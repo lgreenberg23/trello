@@ -1,2 +1,35 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
+.lists {
+	display: flex;
+	flex-direction: row;
+	border: 1px;
+	border-style: solid;
+//	flex-wrap: wrap;
+	overflow:scroll;
+	width:100%;
+}
+
+.list {
+	border: 1px;
+	border-style:solid;
+	padding: 10px;
+	margin: 20px;
+	width: 200px;
+}
+
+.addlist {
+	border: 1px;
+	border-style:solid;
+	margin: 20px;
+	padding: 10px;
+	width:200px;
+}
+
+.task {
+	border: 1px;
+	border-style:solid;
+	padding: 10px;
+	margin: 10px;
+}
