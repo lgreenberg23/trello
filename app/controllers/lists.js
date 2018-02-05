@@ -25,8 +25,8 @@ export default Controller.extend({
 				if ( !listName || !listName.trim() ) {
 					return false
 				}
-			var newList = List.create().setProperties({/*listID: ++counter,*/ name: listName, tasks:[] })			
-			this.get('model').pushObject(newList)
+			let newList = List.create().setProperties({name: listName, tasks:[] })			
+			this.get('store').createRecord('post', {newList})
 			this.set('listName', '')
 		}
 	}
