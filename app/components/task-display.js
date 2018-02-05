@@ -2,6 +2,7 @@ import Component from '@ember/component';
 
 export default Component.extend({
 	isShowingModal: false,
+  isShowingDeleteModal: false,
   actions: {
     toggleModal: function() {
       this.toggleProperty('isShowingModal');
@@ -10,8 +11,11 @@ export default Component.extend({
     	var task = this.get('task')
     	var taskID = this.get('id')
     	var list = this.get('myList')
-      alert('are you sure you want to do this?')
     	list.tasks.removeObject(task)
+    },
+    toggleDelete: function(){
+      console.log('i am in askDelete')
+      this.toggleProperty('isShowingDeleteModal')
     }
   }
 })
