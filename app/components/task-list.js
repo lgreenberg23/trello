@@ -26,14 +26,14 @@ export default Component.extend({
 		addTask: function() {
 			let taskName = this.get('taskName')
 			if ( !taskName || !taskName.trim() ) {
-					return false
-				}
-			//console.log()
-			
-			var newTask = Task.create().setProperties({id: ++counter, taskName: taskName, description:'' })			
-			this.get('list.tasks').pushObject(newTask)
-			this.set('taskName', '')
-			this.set('addATask', false)
+					this.set('addATask', false)
+			}
+			else{
+				var newTask = Task.create().setProperties({id: ++counter, taskName: taskName, description:'' })			
+				this.get('list.tasks').pushObject(newTask)
+				this.set('taskName', '')
+				this.set('addATask', false)
+			}
 		},
 		showEditListName: function() {
 			this.set('editList', true)
