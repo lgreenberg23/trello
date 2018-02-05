@@ -20,12 +20,15 @@ export default Controller.extend({
 		},
 		addList: function() {
 			let listName = this.get('listName')
-				if ( !listName || !listName.trim() ) {
-					return false
-				}
-			var newList = List.create().setProperties({name: listName, tasks:[] })			
-			this.get('model').pushObject(newList)
-			this.set('listName', '')
+			if ( !listName || !listName.trim() ) {
+				this.set('addAList', false)
+			}
+			else{
+				var newList = List.create().setProperties({name: listName, tasks:[] })			
+				this.get('model').pushObject(newList)
+				this.set('listName', '')
+				this.set('addAList', false)
+			}
 		}
 	}
 })
