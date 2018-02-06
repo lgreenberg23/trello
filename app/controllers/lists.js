@@ -29,6 +29,9 @@ export default Controller.extend({
 				this.set('listName', '')
 				this.set('addAList', false)
 			}
+		},
+		closeAddList: function(){
+			this.set('addAList', false)
 		}
 	}
 })

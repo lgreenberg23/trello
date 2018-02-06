@@ -8,11 +8,13 @@
 	 {{/each}}
 
     <div class="addlist">
-      {{#if addAList}}
-        {{input value=listName enter="addList"}}
-      {{else}}
-          <a href {{action "openNewList"}}> Add a list...</a>
-      {{/if}}
+      {{#click-outside action=(action "closeAddList")}}
+        {{#if addAList}}
+          {{input value=listName enter="addList"}}
+        {{else}}
+            <a href {{action "openNewList"}}> Add a list...</a>
+        {{/if}}
+      {{/click-outside}}
 
     </div>
   </div>
