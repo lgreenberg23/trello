@@ -58,6 +58,7 @@
 .modal-body {
   min-width: 400px;
   min-height: 250px;
+  font-family: 'Open Sans', sans-serif;
 }
 .modal-task-title input{
 	font-size: 16pt;
@@ -73,4 +74,8 @@
 }
 .modal-buttons{
 	float: right;
+}
+
+.confirm-delete-modal{
+	font-family: 'Open Sans', sans-serif;
 }
