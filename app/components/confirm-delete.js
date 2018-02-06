@@ -3,14 +3,12 @@ import ModalDialog from 'ember-modal-dialog/components/modal-dialog'
 
 export default ModalDialog.extend({
 	actions:{
-			toggleDelete: function(){
-	      console.log('i am in askDelete')
-	      this.send(toggleProperty('isShowingDeleteModal'))
+		inModalToggle: function() {
+			this.get('toCancel')()
 	    },
 			deleteTask: function(){
 	    	var task = this.get('task')
-	    	var taskID = this.get('id')
-	    	var list = this.get('list')
+	    	var list = this.get('myList')
 	    	list.tasks.removeObject(task)
 	    }
 	  }

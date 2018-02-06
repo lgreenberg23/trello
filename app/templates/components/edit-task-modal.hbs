@@ -1,14 +1,14 @@
 
-  <div class="modal-body">
+  <div class='modal-body'>
     <div class='modal-task-title'>
           {{input value=title}}
       <div class='modal-buttons'>
-        <button {{action "toggleFromInside" id task}}> close </button>
-        <button {{action 'toggleDelete' id task list}}> delete </button>
+        <button {{action 'toggleFromInside'}}> close </button>
+        <button {{action 'toggleDelete'}}> delete </button>
       </div>
       {{#if isShowingDeleteModal}}
         {{#modal-dialog renderInPlace=true}}
-          {{confirm-delete id task list}}
+          {{confirm-delete id=id task=myTask myList=list toCancel=(action "toggleDelete") }}
         {{/modal-dialog}}
       {{/if}}
     </div>
