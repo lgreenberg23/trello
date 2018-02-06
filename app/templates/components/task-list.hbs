@@ -12,12 +12,17 @@
     
 
     <div class='add-task-input'>
+  {{#click-outside action=(action "closeAddTask")}}
         {{#if addATask}}
           {{input value=taskName enter="addTask"}}
+          {{#if clickedOutside}}
+              <a href {{action "openNewTask"}}>Add a task...</a>
+          {{/if}}
         {{else}}
         <a href {{action "openNewTask"}}>Add a task...</a>
 
         {{/if}}
+  {{/click-outside}}
     </div>
 
 </div>
