@@ -4,11 +4,11 @@ export default ModalDialog.extend({
 	isShowingDeleteModal: false,
 	actions: {
 		toggleDelete: function(){
-	    this.toggleProperty('isShowingDeleteModal')
-	  },
-	  toggleFromInside: function() {
-      this.get('onclose')()
-	  }
+			this.toggleProperty('isShowingDeleteModal')
+		},
+		toggleFromInside: function() {
+			this.get('onclose')()
+		}
 	}
 });
 

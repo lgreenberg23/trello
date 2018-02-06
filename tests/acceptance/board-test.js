@@ -56,22 +56,5 @@ test('should be able to edit a list name', function (assert) {
 test('should be able to see details of a task', function (assert) {
 })
 
-test('should be able to delete a list', function (assert) {
-})
-
 test('should be able to delete a task', function (assert) {
 })
-
-
-/*
-number of lists never less than one
-
-integration test -- Submitting a post without a title 
-displays a red validation state on the field and gives the user 
-text indicating that the title is required.
-
-Should pop out an editing modal onClick
-Should be able to close the modal
-Should be able to delete a list from the Modal
-Clicking “delete” should display a confirmation alert before deleting
-*/
