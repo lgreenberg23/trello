@@ -6,7 +6,7 @@ export default Route.extend({
     return [
       {
         name: 'Default List',
-        tasks: []     
+        tasks: [{id:0, taskName:'default task', description:'words'}]     
       }/*,
     {
         name: 'To Do',

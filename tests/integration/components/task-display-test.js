@@ -17,8 +17,10 @@ test('should toggle a window to see details on click', function(assert) {
   this.set('taskObj', task)
   this.render(hbs`{{task-list task=taskObj}}`)
   assert.equal(this.$('show-task.modal').length, 0, 'initially just a task')
-  run(() => document.querySelector('div.show-task').click());
-  assert.equal(this.$('#ember328'), 'rendered modal after click')
+  run(() => document.querySelector('.show-task').click())
+  assert.equal(this.$('show-task.modal').length, 1, 'rendered modal after click')
+  run(() => document.querySelector('.show-task.modal').click())
+  assert.equal(this.$('show-task.modal').length, 0, 'close modal after outside click')
 })
 
 test('it renders', function(assert) {
