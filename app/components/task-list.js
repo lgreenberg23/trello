@@ -49,6 +49,9 @@ export default Component.extend({
 			else{		
 				this.set('editList', false)
 			}
+		},
+		closeEditListName: function(){
+			this.set('editList', false)
 		}
 	}
 

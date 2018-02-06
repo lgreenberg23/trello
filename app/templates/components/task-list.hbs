@@ -1,28 +1,31 @@
 <div class="list">
   
-    {{#if editList}}
-      {{input value=list.name enter="editListName"}}
-    {{else}}
-	   <a {{action "showEditListName"}}><h3>{{list.name}}</h3></a>
-    {{/if}}
+  <div class='edit-list-name'>
+    {{#click-outside action=(action "closeEditListName")}}
+      {{#if editList}}
+        {{input value=list.name enter="editListName"}}
+      {{else}}
+  	   <a {{action "showEditListName"}}><h3>{{list.name}}</h3></a>
+      {{/if}}
+    {{/click-outside}}
+  </div>
     
-      {{#each list.tasks as |taskName|}}
-        <p>{{task-display task=taskName myList=list}}</p>
-      {{/each}}
-    
+  {{#each list.tasks as |taskName|}}
+    <p>{{task-display task=taskName myList=list}}</p>
+  {{/each}}
 
-    <div class='add-task-input'>
-  {{#click-outside action=(action "closeAddTask")}}
-        {{#if addATask}}
-          {{input value=taskName enter="addTask"}}
-          {{#if clickedOutside}}
-              <a href {{action "openNewTask"}}>Add a task...</a>
-          {{/if}}
-        {{else}}
-        <a href {{action "openNewTask"}}>Add a task...</a>
 
+  <div class='add-task-input'>
+    {{#click-outside action=(action "closeAddTask")}}
+      {{#if addATask}}
+        {{input value=taskName enter="addTask"}}
+        {{#if clickedOutside}}
+          <a href {{action "openNewTask"}}>Add an item...</a>
         {{/if}}
-  {{/click-outside}}
-    </div>
+      {{else}}
+        <a href {{action "openNewTask"}}>Add an item...</a>
+      {{/if}}
+    {{/click-outside}}
+  </div>
 
 </div>
