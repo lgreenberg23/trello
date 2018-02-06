@@ -7,13 +7,13 @@ export default Route.extend({
       {
         name: 'Default List',
         tasks: []     
-      },
+      }/*,
     {
         name: 'To Do',
         tasks: [
           {id:1, taskName:'get buttons to work', description:'today'}, 
           {id: 2, taskName:'wash dishes', description:'also must happen today'}]     
-      }/*, {
+      }, {
         name: 'Projects',
         tasks: [
           {id: 3, taskName:'ember', description:'wahhhhh'}, 

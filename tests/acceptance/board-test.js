@@ -13,12 +13,13 @@ test('should show lists as the home page', function (assert) {
 test('should never be less than one list', function (assert) {
 	visit('/');
   andThen(function() {
-    assert.equal(find('.list').length, 2, 'should see 2 lists')
+    assert.equal(find('.list').length, 1, 'should see 1 list')
+    assert.equal(find('.list.tasks').length, 0, 'should see 0 tasks to start')
   })
 })
 
 test('should be able to add a list', function (assert) {
-  click('link.addlist')
+  click(this.$('.addlist'))
 	fillIn('input', 'My new List')
 	keyEvent('input', 'keypress', 13)
  	andThen(() => assert.equal(find('lists h3:last').text(), 'My new List'))

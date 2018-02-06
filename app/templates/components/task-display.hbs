@@ -1,6 +1,6 @@
 <div class="task">
 
-	<div class="show-task" {{action "toggleModal"}}>
+	<div class="show-task{{if isShowingModal "modal"}}" {{action "toggleModal"}}>
 		<p> {{task.taskName}} </p>
 	</div>
 
