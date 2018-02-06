@@ -1,1 +1,6 @@
-{{yield}}
+<div class="confirm-delete-modal">
+	"Are you sure you want to delete this task?"
+	<br>
+	<button {{action 'deleteTask'}}>delete</button>
+	<button {{action 'inModalToggle'}}>cancel</button>
+</div>

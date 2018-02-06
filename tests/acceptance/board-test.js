@@ -1,24 +1,34 @@
-import { test } from 'qunit';
-import moduleForAcceptance from 'trello/tests/helpers/module-for-acceptance';
+import { test } from 'qunit'
+import moduleForAcceptance from 'trello/tests/helpers/module-for-acceptance'
 
 moduleForAcceptance('Acceptance | board')
 
 test('should show lists as the home page', function (assert) {
+	visit('/')
+  andThen(function() {
+    assert.equal(currentURL(), '/lists', 'should redirect automatically')
+  })
 })
 
 test('should never be less than one list', function (assert) {
+	visit('/');
+  andThen(function() {
+    assert.equal(find('.list').length, 2, 'should see 2 lists')
+  })
 })
 
 test('should be able to add a list', function (assert) {
-	// fillIn('input', 'My new List');
- //  click('button.addList');
- //  andThen(() => assert.equal(find('ul.lists h3:last').text(), 'My new List'));
+  click('link.addlist')
+	fillIn('input', 'My new List')
+	keyEvent('input', 'keypress', 13)
+ 	andThen(() => assert.equal(find('lists h3:last').text(), 'My new List'))
 })
 
+//this might be an integration or unit test
 test('should not be able to add an empty string as a list', function (assert) {
 })
 
-test('should link to add a task', function (assert) {
+test('should be able to add a task', function (assert) {
 })
 
 test('should not be able to add an empty string as a task', function (assert) {

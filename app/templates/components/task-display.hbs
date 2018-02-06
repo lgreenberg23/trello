@@ -9,21 +9,14 @@
 			onClose=(action "toggleModal" false) 
       targetAttachment='center'
       translucentOverlay=true}}
-      <div class='modal-buttons'>
-				<button {{action 'toggleModal' id}}> close </button>
-				<button {{action 'toggleDelete' id task myList}}> delete </button>
-			</div>
-
-			{{#if isShowingDeleteModal}}
-				{{#modal-dialog renderInPlace=true}}
-					"Are you sure you want to delete this task?"
-					<button {{action 'deleteTask'}}>delete</button>
-					<button {{action 'toggleDelete'}}>cancel</button>
-				{{/modal-dialog}}
-			{{/if}}
 
 
-			{{edit-task-modal description=task.description title=task.taskName id=task.id }}
+			{{edit-task-modal 
+					description=task.description 
+					title=task.taskName 
+					id=task.id 
+					list=myList 
+					onclose=(action "toggleModal")}}
   	{{/modal-dialog}}
 	{{/if}}
 
