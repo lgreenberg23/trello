@@ -1,27 +1,24 @@
-
-  <div class='modal-body'>
-    <div class='modal-task-title'>
-          {{input value=title}}
-      <div class='modal-buttons'>
-        <button {{action 'toggleFromInside'}}> close </button>
-        <button {{action 'toggleDelete'}}> delete </button>
-      </div>
-      {{#if isShowingDeleteModal}}
-        {{#modal-dialog renderInPlace=true}}
-          {{confirm-delete id=id task=myTask myList=list toCancel=(action "toggleDelete") }}
-        {{/modal-dialog}}
-      {{/if}}
+<div class='modal-body'>
+  
+  <div class='modal-task-title'>
+      {{input value=title}}
+    <div class='modal-buttons'>
+      <button {{action 'toggleFromInside'}}> close </button>
+      <button {{action 'toggleDelete'}}> delete </button>
     </div>
-    
-
-		<div class="task-description">
-      <br>
-  		<h4>Description:</h4>
-  		
-	  		{{textarea value=description}}
-
-		</div>
-
-      {{!-- {{yield}} --}}
+    {{#if isShowingDeleteModal}}
+      {{#modal-dialog}}
+        {{confirm-delete task=myTask myList=list toCancel=(action "toggleDelete") }}
+      {{/modal-dialog}}
+    {{/if}}
   </div>
+  
+
+	<div class="task-description">
+    <br>
+		<h4>Description:</h4>
+  	{{textarea value=description}}
+	</div>
+
+</div>
 

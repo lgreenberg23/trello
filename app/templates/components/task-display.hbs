@@ -8,16 +8,18 @@
 		{{#modal-dialog 
 			onClose=(action "toggleModal" false) 
       targetAttachment='center'
-      translucentOverlay=true}}
+      translucentOverlay=true
+    }}
 
 
 			{{edit-task-modal 
-					description=task.description 
-					title=task.taskName 
-					myTask=task
-					id=task.id 
-					list=myList 
-					onclose=(action "toggleModal")}}
+				description=task.description 
+				title=task.taskName 
+				myTask=task
+				id=task.id 
+				list=myList 
+				onclose=(action "toggleModal")
+			}}
   	{{/modal-dialog}}
 	{{/if}}
 
